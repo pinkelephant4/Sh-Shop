@@ -129,7 +129,7 @@ function Map({ filteredData }) {
     <MapContainer
       center={center}
       zoom={3.5}
-      style={{ width: "55vw", height: "75vh", backgroundColor: "#0000" }}
+      style={{ width: "49.8vw", height: "75vh", backgroundColor: "#0000" }}
       zoomControl={false}
       attributionControl={false}
     >
@@ -163,14 +163,18 @@ function Map({ filteredData }) {
             })
             .reduce((acc, curr) => acc + curr, 0);
 
-          console.log(stateSumTarget , stateSumSellout, stateName);
+          // console.log(stateSumTarget, stateSumSellout, stateName);
+
+          if (stateName === "California") {
+            console.log(stateSumTarget, stateSumSellout, stateName);
+          }
 
           //   color = stateSumTarget > stateSumSellout ? "red" : "green";
 
-          if (stateSumTarget > stateSumSellout) {
+          if (stateSumTarget < stateSumSellout) {
             color = "green";
           }
-          if (stateSumTarget <= stateSumSellout) {
+          else if (stateSumTarget >= stateSumSellout) {
             color = "red";
           } else {
             color = "white";
@@ -193,7 +197,7 @@ function Map({ filteredData }) {
           <Polygon
             key={stateName}
             pathOptions={{
-              fillColor: color,
+              fillColor: `${color}`,
               fillOpacity: 0.7,
               weight: 2,
               opacity: 1,

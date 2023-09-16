@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Verizon from "../assets/images/verizon-img.png";
 import TMobile from "../assets/images/tmob-img.png";
-import ATT from "../assets/images/AT&T-img.png";
 import BestBuy from "../assets/images/bestbuy-img.png";
 
 function FiltersC({ changeCarrier }) {
@@ -48,7 +47,7 @@ function FiltersC({ changeCarrier }) {
                     }
                   : { width: "100%" }
               }
-              src={ATT}
+              src="https://res.cloudinary.com/dsnnvjuqz/image/upload/v1694834726/At_T-img_xitnnn.png"
               className="carrierImage"
               alt="ATT"
             />
